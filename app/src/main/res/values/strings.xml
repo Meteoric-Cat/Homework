@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Homework6</string>
+
+    <!--MainActivity-->
+    <string name="btn_callA">Call A</string>
+    <string name="btn_callSubB">Call Sub B</string>
+</resources>
