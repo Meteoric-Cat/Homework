@@ -17,8 +17,8 @@ public class MainActivity extends AppCompatActivity {
     private static final String KEY_MESSAGE_A = "key a";
     private static final String MESSAGE_A = "Xin chào A";
     private static final String ACTION_B = "com.meteor.homework8.CALL_SUB_B";
-    private static final String PACKAGE_B = "com.meteor.homework8";
-    private static final String CLASS_B = "com.meteor.homework8.activity.SubB";
+    private static final String PACKAGE_B = "com.meteor.homework8.activity";
+    private static final String CLASS_B = "com.meteor.homework8.activity.SubB$CustomBroadcastReceiver";
     private static final String KEY_MESSAGE_B = "key b";
     private static final String MESSAGE_B = "Xin chào B";
 
@@ -64,13 +64,12 @@ public class MainActivity extends AppCompatActivity {
         startIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         startActivity(startIntent);
 
-        //solution2
+        //solution2-no asyntask
         /*
         Intent intent = new Intent();
         intent.setAction(ACTION_A);
         intent.setComponent(new ComponentName(PACKAGE_A, CLASS_A));
         intent.addFlags(Intent.FLAG_INCLUDE_STOPPED_PACKAGES);
-        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         intent.putExtra(KEY_MESSAGE_A, MESSAGE_A);
         sendBroadcast(intent);
         */
